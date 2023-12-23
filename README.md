@@ -11,6 +11,15 @@
 ### 2. Mnist dataset classification
 #### Benchmark dataset으로 주로 사용되는 Mnist dataset을 통해 이미지 classification 모델을 구현하였음
 #### 이 때 torch에서 제공하는 모델이 아닌 CNN기반 모델을 구현해서 사용하였음 구현된 모델의 구조는 아래와 같음
-'''
-for i in range(3)
-'''
+```python
+class CNN(nn.Module):
+  def __init__(self):
+  super(CNN, self).__init__()
+  self.conv1=nn.Conv2d(1,32,3,1)
+  self.conv2=nn.Conv2d(32,64,3,1)
+  self.dropout1=nn.Dropout2d(0.25)
+  self.dropout2d==nn.Dropout2d(0.5)
+  self.fc1=nn.Linear(9216, 128)
+  self.fc2=nn.Linear(128, 10)
+```
+#### 해당 모델에서 hyperparameter는 lr=0.0001, batch_size=50, epoch=15 로 사용하여 학습하였을 때 Test에서 99.00의 accuracy를 보였다. 간단한 모델을 구현 했다고 생각했는데 예상외로 높은 성능을 보여주었다.
