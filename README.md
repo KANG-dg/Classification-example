@@ -5,7 +5,7 @@
 
 
 ### 1. chest X-Ray classification
-#### Chast X-Ray dataset을 통해 3개 class(covid-19, noraml, pneumonia)로 분류 모델은 pretrained된 VGG19 모델을 사용하였음
+#### Chast X-Ray dataset을 통해 3개 class(covid-19, noraml, pneumonia)로 분류하는것이 목적 모델은 pretrained된 VGG19 모델을 사용하였음
 #### 이 때 모델의 마지막 layer에 adaptiveaveavgpooling, Relu, dropout을 사용하였음 일반적으로 마지막 classifier의 output 숫자를 class개수에 맞게 수정하는 방법보다 overfitting을 방지하는것에 효과가 있을 것으로 판단.
 
 ### 2. Mnist dataset classification
