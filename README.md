@@ -23,3 +23,6 @@ class CNN(nn.Module):
   self.fc2=nn.Linear(128, 10)
 ```
 #### 해당 모델에서 hyperparameter는 lr=0.0001, batch_size=50, epoch=15 로 사용하여 학습하였을 때 Test에서 99.00의 accuracy를 보였다. 간단한 모델을 구현 했다고 생각했는데 예상외로 높은 성능을 보여주었다.
+
+### 3. 작물 병충해 분류
+#### 33개 class가 존재하는 작물 잎 병충해 데이터를 사용하였음 모델은 pretrained된 Resnet50 모델을 사용하였고 학습시 Augmentation으로 Horizontalflip, Verticalflip, randomcrop을 사용하여 실험 하였음 Augmentation이 모델의 성능에 긍정적인 영향을 줄 수 있음을 확인하였음
